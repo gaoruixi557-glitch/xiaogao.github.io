@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>eos.aidainternatinal.org</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #ffffff;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      cursor: zoom-in;
+      transition: transform 0.25s ease;
+      transform-origin: top center;
+    }
+
+    img.zoomed {
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="photo" src="IMG_2409.png" alt="image">
+
+  <script>
+    const photo = document.getElementById("photo");
+
+    photo.addEventListener("click", function () {
+      photo.classList.toggle("zoomed");
+    });
+  </script>
+</body>
+</html>
